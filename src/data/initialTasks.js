@@ -7,7 +7,7 @@ export const initialTasks = [
   {
     id: 2,
     title: "Learn CSS",
-    done: true,
+    done: false,
   },
   {
     id: 3,
