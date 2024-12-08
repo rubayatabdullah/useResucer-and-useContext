@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { TasksContext, useTask } from "../contexts/TaskContext";
 
-export default function AddTask({ onAdd }) {
+export default function AddTask() {
   const [text, setText] = useState("");
+  const { onAddTask } = useTask(TasksContext);
   return (
     <>
       <input
@@ -12,7 +14,7 @@ export default function AddTask({ onAdd }) {
       />
       <button
         onClick={() => {
-          onAdd(text);
+          onAddTask(text);
           setText("");
         }}
       >
